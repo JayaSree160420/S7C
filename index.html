@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Seventh Triangle Consulting </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+<script>
+    var price=0;
+    
+    function calculateprice()
+    {
+        var green1=document.getElementById("10kg").getAttribute("class");
+        var green2=document.getElementById("5kg").getAttribute("class"); 
+       
+        if( green1=="btn-success"){
+    this.price+=399*document.getElementById("qty1").value;
+        }
+        if( green2=="btn-success"){
+    this.price+=299*document.getElementById("qty2").value;
+        }
+        document.getElementById("display").innerHTML="Rs"+" "+this.price;
+        this.price=0;
+    }
+    
+    function tenkg()
+    {
+        document.getElementById("10kg").setAttribute("class","btn-success");
+        // this.price+=399*document.getElementById("qty1").value;
+    }
+    function fivekg(){
+        document.getElementById("5kg").setAttribute("class","btn-success");
+        // this.price+=299*document.getElementById("qty2").value;
+    }
+    </script>
+</head>
+
+<body>
+
+<div class="container">
+  <h2><center>Assignment</center></h2>
+ 
+  <div class="row">
+    <div class="col-md-6">
+      <div class="thumbnail">
+       
+          <img class="sec2"style="width:290px" src="6.jpg" alt="Lights">
+         
+      </div>
+    </div>
+   
+    <div class="col-md-6">
+      <div class="thumbnail" style="padding-bottom: 45px;">
+      <h3>Ashirvaad Atta Whole wheat</h3>
+     <div><b>Rs 399</b></div>
+     <div>Pack Sizes</div>
+     <div class="row">
+         <div class="col-md-4">
+          <button type="button" id="10kg" onclick="tenkg()" class="btn  btn-sm">10kgs
+            <br>Rs399
+            </button>
+         </div>
+         <div class="col-md-4">
+         <button type="button" id="5kg" onclick="fivekg()" class="btn  btn-sm">5kgs
+                <br>Rs 209
+                </button>
+        </div>
+     </div>
+      <br>
+     Quantity of 10 kgs:
+     <input type='text' value="0"name='qty' id='qty1' />
+     <input type="button" name="add" onclick='javascript:if(document.getElementById("qty1").value<100)document.getElementById("qty1").value++;' value='+' />
+<input type="button" name="substract" onclick='javascript:if(document.getElementById("qty1").value>0)document.getElementById("qty1").value--;' value='-' />
+     <br>
+     <br>Quantity of 5 kgs      :
+     <input type='text' value="0" name='qty' id='qty2' />
+     <input type="button" name="add" onclick='javascript:if(document.getElementById("qty2").value<100)document.getElementById("qty2").value++;' value='+' />
+     <input type="button" name="substract" onclick='javascript:if(document.getElementById("qty2").value>0)document.getElementById("qty2").value--;' value='-' />
+
+   
+        
+   
+    <br>
+    <br>
+    <button type="button" class="btn btn-primary btn-sm" onclick="calculateprice()">
+        Payable 
+        </button>
+       <span>=</span> <span style="color: green; font-weight: bold;" id="display"></span>
+      </div>
+ </div>
+    </div>
+    
+
+    
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="thumbnail">
+       
+          <img src="5.jpg" alt="Lights" style="width: 303px;" >
+         <center><h3>Pulses</h3></center>
+      </div>
+    </div>
+  
+    <div class="col-md-6">
+    
+      
+        <div class="row">
+            <div class="col-md-6">
+              <div class="thumbnail ">
+               
+                  <img  src="1.jpg" style="width: 143px;" alt="Lights" >
+                  <center class="border"><h3>Atta</h3> </center>
+              </div>
+            </div>
+          
+            <div class="col-md-6">
+                <div class="thumbnail">
+                 
+                    <img src="3.jpg" style="width: 117px;" alt="Lights" >
+                    <center><h3>Rice</h3></center>
+                </div>
+              </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+              <div class="thumbnail">
+               
+                  <img src="4.jpg"  style="width: 105px;" alt="Lights" >
+                  <center><h3>Cooking Oil</h3></center>
+              </div>
+            </div>
+          
+            <div class="col-md-6">
+                <div class="thumbnail">
+                 
+                    <img src="5.jpg" style="width: 120px;" alt="Lights" >
+                    <center><h3>Pulses</h3></center>
+                </div>
+              </div>
+        </div>
+
+      
+    </div>
+  
+  </div>
+
+</div>
+
+</body>
+</html>
